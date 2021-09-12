@@ -1,0 +1,39 @@
+.message {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	font-family: Whitney, Helvetica, sans-serif;
+}
+
+.message-avatar {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.message-heading {
+	margin-top: 5px;
+	display: flex;
+	align-items: baseline;
+}
+
+.message-author {
+	color: #fff;
+	cursor: pointer;
+}
+
+.message-author:hover {
+	text-decoration: underline;
+}
+
+.message-date {
+	margin-left: 3px;
+	color: #72767d;
+	font-size: 12px;
+}
+
+.message-body {
+	color: #DCDDDE;
+	font-family: Roboto;
+}
