@@ -1,4 +1,3 @@
-import logo from './assets/logo.png';
 import './style/App.css';
 import React from 'react';
 import Chat from './components/Chat/Chat';
@@ -17,7 +16,7 @@ class App extends React.Component {
 	}
 
 	componentDidMount() {
-		this.socket = io.connect('http://localhost:8080');
+		this.socket = io.connect(process.env.REACT_APP_SOCKET_URL);
 		this.socket.on('messageCreate', msg => {
 			const messages = [...this.state.messages, msg];
 			this.setState({messages});
@@ -29,11 +28,11 @@ class App extends React.Component {
 	};
 
 	render() {
-		return (<div className='App'>
-			{/* <img src={logo} alt='Trouvez les clés!' style={{width: '40%'}} />
-			<p>new random project haha</p> */}
-			<Chat messages={this.state.messages} channelName='le-quai' desc={'Je sais pas mais bite bite bite'} sendMessage={this.sendMessage.bind(this)}></Chat>
-		</div>);
+		return (
+			<div className='App'>
+				<Chat messages={this.state.messages} channelName='le-quai' desc={'Je sais pas mais bite bite bite'} sendMessage={this.sendMessage.bind(this)}></Chat>
+			</div>
+		);
 	}
 
 }
