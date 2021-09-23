@@ -1,0 +1,13 @@
+{
+  "name": "tvlc--server",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io": "^4.2.0"
+  }
+}
